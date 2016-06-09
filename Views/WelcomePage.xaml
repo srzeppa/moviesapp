@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="moviesapp.Views.WelcomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=Welcome}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer Style="{StaticResource PageScrollViewerStyle}">
+            <StackPanel>
+                <TextBlock Text="Welcome" Style="{StaticResource TitleTextBlockStyle}" />
+                <TextBlock Style="{StaticResource ParagraphTextBlockStyle}">
+                    <Run Text="Thank you for installing movie app! In this application you can:" />
+                    <LineBreak /><LineBreak />
+                    <Run Text="• Search movies" /><LineBreak />
+                    <Run Text="• Add movies to your 'watch movies' list" /><LineBreak />
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
